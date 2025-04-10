@@ -24,7 +24,7 @@ def run_make_setup_full():
     original_dir = os.getcwd()
 
     # Ensure submodules are updated before running the Makefile
-    update_submodules()
+    # update_submodules()
 
     # Ensure the Makefile uses the current Python interpreter
     env = os.environ.copy()
@@ -42,7 +42,7 @@ class CustomBuild(_build):
         # Run egg_info to ensure metadata is available
         self.run_command('egg_info')
         # Update submodules and run the Makefile before building anything else
-        run_make_setup_full()
+        # run_make_setup_full()
         # Continue with the normal build process
         _build.run(self)
 
